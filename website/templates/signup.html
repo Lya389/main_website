@@ -1,3 +1,4 @@
+{% extends "template.html" %} {% block title %}Sign Up{% endblock %} {% block content %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,34 +21,11 @@
 
     <!-- TailWindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-              indigo: "4B0082",
-              cc1: "#F8F9FA",
-              cc2: "#E9ECEF",
-              cc3: "#DEE2E6",
-              cc4: "#CED4DA",
-              cc5: "#ADB5BD",
-              cc6: "#6C757D",
-              cc7: "#495057",
-              cc8: "#343A40",
-              cc9: "#212529",
-            },
-          },
-        },
-      };
-    </script>
   </head>
 
   <body>
-    <!-- background -->
-    <div class="bg-cc6 z-0">
       <!-- Start of login grid -->
-      <div class="grid grid-rows-5 grid-cols-5 h-screen bg-cc6">
+      <div class="grid grid-rows-5 grid-cols-5 h-screen">
         <!-- login -->
         <div class="row-start-2 row-end-5 col-start-2 col-end-5 rounded-3xl relative z-10">
           <div
@@ -112,6 +90,6 @@
         </form>
         </div>
       </div>
-    </div>
   </body>
 </html>
+{% endblock %}

@@ -19,15 +19,49 @@
           colors: {
             clifford: '#da373d',
             indigo: "4B0082",
+            'cc1': "#F8F9FA",
+            'cc2': "#E9ECEF",
+            'cc3': "#DEE2E6",
+            'cc4': "#CED4DA",
+            'cc5': "#ADB5BD",
+            'cc6': "#6C757D",
+            'cc7': "#495057",
+            'cc8': "#343A40",
+            'cc9': "#212529",
           }
-        
         }
       }
     }
   </script>
 </head>
-
 <body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Ensure no horizontal scroll */
+    }
+  </style>
+<!-- background -->
+        <!-- FLASHES -->
+        {% with messages = get_flashed_messages(with_categories = true)%}
+        {% if messages %}
+        {% for category, message in messages %} {% if category == 'error' %}
+        <div class="alert alert-danger alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% else %}
+        <div class="alert alert-success alter-dismissable fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %}{% endfor %}{% endif %}{% endwith %}
+        <div class="container bg-transparent">{% block content %}{% endblock %}</div>
 </body>
 
 </html>
