@@ -1,7 +1,6 @@
       /* ---- particles.js container ---- */ 
       #particles-js{ 
             height: 900px; 
-            background-color: #d4d4d4; 
             width: cover;
       }
 
@@ -24,11 +23,9 @@
       width: 40vw;
       height: 80vh;
       margin-right: 10px;
-      border-radius: 10px;
       background-size: cover;
       background-position: center center;
-      margin-bottom: 10px;
-      margin-top: 10px;
+      border-radius: 10px;
     }
       /* cell number */
       .gallery-cell:before {

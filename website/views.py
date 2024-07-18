@@ -5,13 +5,14 @@ from .import db
 
 views = Blueprint("views", __name__)
 
+
 @views.route("/")
 @views.route("/home")
 def home():
-   return render_template("home.html", user=current_user)
-
-   
+    return render_template("home.html", user=current_user)
 
 
-
-    
+@views.route("/")
+@views.route("/choice")
+def home():
+    return render_template("choice.html", user=current_user)
