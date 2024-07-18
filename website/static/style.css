@@ -1,0 +1,39 @@
+      /* ---- particles.js container ---- */ 
+      #particles-js{ 
+            height: 900px; 
+            background-color: #d4d4d4; 
+      }
+
+      .alert{
+            position: absolute; 
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto; 
+            width: 50%;
+            margin-top: 2vh;
+            box-shadow: 3px 10px 10px rgb(0 0 0 / 0.4);
+            z-index: 5;
+      }
+
+      * { box-sizing: border-box; }
+
+    body { font-family: sans-serif; }
+    .gallery-cell {
+      width: 40vw;
+      height: 80vh;
+      margin-right: 10px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+      /* cell number */
+      .gallery-cell:before {
+            display: block;
+            text-align: center;
+            line-height: 200px;
+            font-size: 80px;
+            color: white;
+      }
