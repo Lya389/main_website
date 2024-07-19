@@ -16,6 +16,11 @@
             z-index: 5;
       }
 
+      .lightBG{
+            margin-right: 6vw;
+            margin-left: 6vw;
+      }
+
       * { box-sizing: border-box; }
 
     body { font-family: sans-serif; }

@@ -12,7 +12,6 @@ def home():
     return render_template("home.html", user=current_user)
 
 
-@views.route("/")
 @views.route("/choice")
-def home():
+def choice():
     return render_template("choice.html", user=current_user)
