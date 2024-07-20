@@ -64,4 +64,5 @@ def sign_up():
 @login_required
 def logout():
     logout_user()
+    flash('Logged Off!', category='success')
     return redirect(url_for("views.home"))

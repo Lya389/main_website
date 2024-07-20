@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.6"
+  },
+  "dependencies": {
+    "particlesjs": "^2.2.3"
   }
 }
