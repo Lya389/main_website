@@ -15,3 +15,25 @@ def home():
 @views.route("/choice")
 def choice():
     return render_template("choice.html", user=current_user)
+
+
+@views.route("/updates")
+def updates():
+    posts = Post.query.all()
+    return render_template("updates.html", user=current_user, posts=posts)
+
+
+@views.route("/create", methods=['GET', 'POST'])
+@login_required
+def create():
+    if request.method == "POST":
+        text = request.form.get('text')
+        if not text:
+            flash('Post cannot be empty', category='error')
+        else:
+            post = Post(text=text, author=current_user.id)
+            db.session.add(post)
+            db.session.commit()
+            flash('Post created', category='success')
+            return redirect(url_for('views.updates'))
+    return render_template('create.html', user=current_user)

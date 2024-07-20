@@ -1,0 +1,56 @@
+{% extends "template.html" %} {% block title %}Update{% endblock %}{% block content %}
+  
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+</body>
+<div class="bg-zinc-800 bg-cover h-fit lightBG">
+    <div class="grid">
+      <h1 align="center">{% block header %} POSTS {% endblock %}</h1>
+<div id ="posts" class="mx-10">
+   {% for post in posts%}
+   <div class = "card border-dark">
+      <div class="card-header d-flex justify-content-between align-items-center">
+         <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
+         {% if user.id == post.author %}
+         <div class="btn-group">
+            <button
+            type="button"
+            class="btn btn-sm btn-primary dropdown-toggle"
+            data-bs-toggle="dropdown">
+         </button>
+         <ul class="dropdown-menu place-self-center">
+            <li>
+               <a href="/delete-post/ {{post.id}}" class="dropdown-item">Delete</a>
+            </li>
+         </ul>
+         </div>
+         {% endif %}
+      </div>
+   <div class="card-body">
+      <div class="card-text">{{post.text}}</div>
+   </div>
+   <div class="card-footer text-muted">{{post.date_created}}</div>
+   </div>
+   <br />
+   {% endfor %}
+</div>
+<br/>
+<div align="center">
+   <a href="/create">
+      <button type='button' class='btn btn-primary btn-lg mb-6'>
+       Create a post
+     </button>
+   </a>
+</div>
+    </div>
+</div>
+</html>
+
+{% endblock %}
