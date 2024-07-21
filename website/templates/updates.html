@@ -12,7 +12,15 @@
 </body>
 <div class="bg-zinc-800 bg-cover h-fit lightBG">
     <div class="grid">
-      <h1 align="center">{% block header %} POSTS {% endblock %}</h1>
+            <div align="center">
+         <a href="/create">
+            <button type='button' 
+            class='h-8 bg-zinc-600 w-80 rounded mb-4 mt-4 text-zinc-50 hover:bg-zinc-700 transition ease-in-out delay-50' 
+            style="text-shadow: 0px 0px 8px #bfbfbf;">
+             Admin? Making post?
+           </button>
+         </a>
+      </div>
 <div id ="posts" class="mx-10">
    {% for post in posts%}
    <div class = "card border-dark">
@@ -42,14 +50,7 @@
    {% endfor %}
 </div>
 <br/>
-<div align="center">
-   <a href="/create">
-      <button type='button' class='btn btn-primary btn-lg mb-6'>
-       Create a post
-     </button>
-   </a>
-</div>
-    </div>
+
 </div>
 </html>
 
